@@ -1,0 +1,81 @@
+html {
+    background-color: rgb(151, 251, 201);
+}
+
+#poster {
+    width: 225px;
+    height: 317px;
+}
+
+.anime-container {
+    max-width: 1200px;
+    height: calc(100vh - 20px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+#generate {
+    position: relative;
+    overflow: hidden;
+
+    display: inline-block;
+    padding: 3px 15px;
+
+    background: none;
+    border: 1px green solid;
+    box-shadow: 0 0 5px green;
+    cursor: pointer;
+    
+    z-index: 2;
+}
+
+#generate::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(12, 184, 35);
+    z-index: -1;
+    
+    transform: translateX(-100%);
+    transition: all .5s ease;
+}
+
+#generate:hover::after {
+    transform: translateX(50%);
+}
+
+#generate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(12, 184, 35);
+    z-index: -1;
+    
+    transform: translateX(100%);
+    transition: all .5s ease;
+}
+
+#generate:hover::before {
+    transform: translateX(-50%);
+}
+
+#title {
+    font-size: 42px;
+    color: rgb(155, 89, 3);
+    font-weight: bold;
+}
