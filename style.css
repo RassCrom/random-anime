@@ -52,7 +52,7 @@ html {
 }
 
 #generate:hover::after {
-    transform: translateX(50%);
+    transform: translateX(55%);
 }
 
 #generate::before {
@@ -71,7 +71,7 @@ html {
 }
 
 #generate:hover::before {
-    transform: translateX(-50%);
+    transform: translateX(-45%);
 }
 
 #title {
